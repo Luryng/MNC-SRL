@@ -87,6 +87,14 @@ body{
 }
 
 /*--Footer--*/
+.foot{
+    background-color:rgb(16, 16, 22) ;
+    width: 100%;
+}
+footer img{
+    width: 100px;
+    height: 100px;
+}
 .ff{
     width: 100%;
     display: flex;
@@ -101,4 +109,45 @@ body{
 .copy{
     color: grey;
     align-items: end;
+}
+
+/*--Productos--*/
+
+.titulo{
+    text-align: center;
+    font-size: 25px;
+    font-style: oblique;
+    margin-top: 5px;
+}
+.img_p{
+    display: flex;
+    width: 340px;
+    height: 400px;
+    }
+
+    .titulo_cal{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+       
+    }
+
+
+.container {
+    margin-top: 0 5px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    }
+
+
+
+ .txt_p{
+        display: flex;
+
+        align-items:center ;
+        justify-content: center;
+        font-size: small;
+
 }
