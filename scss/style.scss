@@ -1,0 +1,422 @@
+$color-pri: #21D4FD;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: PlayFairDisplay;
+    src: url('/assets/font/PlayfairDisplay-Regular.ttf');
+}
+@font-face{
+    font-family: Caveat;
+    src: url('/assets/font/Caveat-Regular.ttf');
+}
+/*--Inicio--*/
+
+body{
+    width: 100%;
+    background-color: $color-pri;
+    background-image: linear-gradient(180deg, $color-pri 0%, #4c7ff9 100%);
+    font-family: PlayFairDisplay;
+}
+
+/** NAV **/
+
+.nav{
+    background-color:rgb(16, 16, 22) ;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+    align-self: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    margin-right: 20px;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-family: Caveat;
+        font-size: larger;
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width: 990px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+        min-width: 400px;
+    }
+}
+@media only screen and (max-width: 775px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/** |NAV| **/
+
+/** INDEX **/
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "a1 intro a2"
+    "a1 intro a2";
+    .s{
+        width: 100%;
+    }
+    
+    .a1{
+        grid-area: a1;
+    }
+    
+    .intro{
+        grid-area: intro;
+    }
+    
+    .a2{
+        grid-area: a2;
+    }
+}
+
+.intro{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    h1{
+        margin-top: 40px;
+    }
+}
+.intro, p{
+    font-size: large;
+}
+
+@media only screen and (max-width: 1400px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "a1 intro"
+        "a1 intro";
+    }
+    .a2{
+        display: none;
+    }
+    .intro{
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 1150px){
+    .grid{
+        display: flex;
+        flex-direction: column;
+        background-image: url(../assets/img/losandes.jpg);
+        background-size: cover;
+    }
+    .a1{
+        display: none;
+    }
+}
+@media only screen and (max-width: 900px){
+    .intro{
+        background-color: rgba(128, 128, 128, 0.644);
+    }
+}
+/** |INDEX|**/
+
+/** PRODUCTOS **/
+.titulo{
+    text-align: center;
+    font-size: 25px;
+    font-style: oblique;
+    margin: auto;
+}
+.img_p{
+    display: flex;
+    }
+    .titulo_cal{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+       
+    }
+.d-block{
+    overflow: hidden;
+}
+.container {
+    margin-top: 0 5px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    }
+ .txt_p{
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        font-size: small;
+}
+
+/** |PRODUCTOS| **/
+
+/** PROPIEDADES **/
+.pcal{
+    background-color: dimgray;
+    border-radius: 5px;
+    color: white;
+    text-align: justify;
+    h1{
+        text-align: center;
+        margin: 0;
+    }
+    h2{
+        text-align: center;
+        margin: 20px 0px; 
+    }
+    p{
+        margin: 60px;
+    }
+}
+.ch{
+    text-align: center;
+}
+.ch img{
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
+}
+@media only screen and (max-width: 1300px){
+    .ch{
+        overflow: hidden;
+    }
+    .ch img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
+@media only screen and (max-width: 900px){
+    .ch{
+        overflow: hidden;
+    }
+    .ch img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
+
+/** |PROPIEDADES| **/
+
+/**  NOSOTROS  **/
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: auto;
+    border: solid 5px black;
+    gap: 20px;
+}
+.nos-grid{
+    margin: 20px;
+    display: grid;
+    justify-content: center;
+    gap: 150px;
+    grid-template-columns: repeat(4 2fr);
+    grid-template-rows: repeat(2 2fr);
+    grid-template-areas: 
+    'box1 box1 box2 box2'
+    'box3 box3 box4 box4'
+    ;
+    .b1{
+        grid-area: box1;
+    }
+    .b2{
+        grid-area: box2;
+    }
+    .b3{
+        grid-area: box3;
+    }
+    .b4{
+        grid-area: box4;
+    }
+    
+}
+.box{
+    margin: 15px;
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    background-color: royalblue;
+    text-align: justify;
+    color: black;
+    h2{
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(0, 0, 0);
+        color:white;
+        font-size: 2rem;
+    }
+    p{
+        margin:30px ;
+    }
+}
+
+.MNC{
+    text-align: justify;
+    H2{
+        text-align: center;
+        font-size: 2rem;
+        p{
+            width: 70%;
+            margin-left: 200px;
+        }
+    }
+}
+@media only screen and (max-width: 990px){
+    .nos-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 400px;
+    }
+    .MNC{
+        align-items: center;
+    }
+    .MNC p{
+        margin: auto;
+    }
+}
+
+/** |NOSOTROS| **/
+
+/** CONTACTO **/
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+.titulo_form{
+    color: #fff;
+}
+
+.logo_cont {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 150px;
+}
+
+.logo_cont span {
+    color: #B70E21;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #222222;
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    form label {
+        display: block;
+    }
+    form p {
+        margin: 0;
+        padding: 1em;
+    }
+}
+.contact-form form .block {
+    grid-column: 1 /3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.contact-form form label{
+    color: #fff;
+}
+
+/* CONTACT INFO */
+
+.contact-info {
+    background: #B70E21;
+    color: white;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+/** |CONTACTO| **/ 
