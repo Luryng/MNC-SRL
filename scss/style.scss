@@ -85,6 +85,10 @@ body{
     }
     .a1{
         grid-area: a1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
     
     .intro{
@@ -93,6 +97,10 @@ body{
     
     .a2{
         grid-area: a2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }
 
@@ -117,7 +125,11 @@ body{
         "a1 intro"
         "a1 intro";
     }
-    .a2{
+    .a1, .bv-1{
+        width: 100%;
+        height: auto;
+    }
+    .a2, .bv-2{
         display: none;
     }
     .intro{
@@ -131,7 +143,7 @@ body{
         background-image: url(../assets/img/losandes.jpg);
         background-size: cover;
     }
-    .a1{
+    .a1 , .bv-1{
         display: none;
     }
 }
@@ -399,11 +411,12 @@ body{
     text-align: center;
     margin: 0 0 1rem 0;
 }
-
-@media(min-width: 700px) {
+/*
+@media(max-width: 700px) {
     body {
-        padding: 0 4em;
+        padding: 0 4rem;
     }
+}
     .contact-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -416,6 +429,4 @@ body{
     .contact-info p {
         text-align: left;
     }
-}
-
 /** |CONTACTO| **/ 
