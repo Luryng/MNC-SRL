@@ -445,6 +445,7 @@ body {
   gap: 150px;
   background-image: url(../assets/img/carga.jpeg);
   background-repeat: no-repeat;
+  background-position: center;
   grid-template-columns: repeat(4 2fr);
   grid-template-rows: repeat(2 2fr);
   grid-template-areas: "box1 box1 box2 box2" "box3 box3 box4 box4";
