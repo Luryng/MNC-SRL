@@ -69,6 +69,8 @@ body{
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin: 0;
+        padding: 0;
     }
 }
 /** |NAV| **/
@@ -201,12 +203,15 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction:row;
-    }
- .txt_p{
+    .txt_p{
         display: flex;
         align-items:center ;
         justify-content: center;
         font-size: small;
+    }
+    .text_cal{
+        margin: 50px;
+    }
 }
 
 .img_cal1{
@@ -521,26 +526,13 @@ body{
         color: whitesmoke;
     }
 }
-@media only screen and (max-width: 990px){
-    .nos-grid{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 400px;
-    }
-    .MNC{
-        align-items: center;
-    }
-    .MNC p{
-        margin: auto;
-    }
-}
+
 
 .galeria{
     display: flex;
     width: 100%;
     height: 430px;
-    margin: 15px;
+    padding: 5px;
     .cal_img{
         width: 0px;
         flex-grow: 1;
@@ -555,6 +547,42 @@ body{
         }
     }
 }
+
+@media only screen and (max-width: 990px){
+    .nos-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 400px;
+    }
+    .MNC{
+        align-items: center;
+    }
+    .MNC p{
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 500px){
+    .galeria{
+        height: auto;
+        flex-direction: column;
+        object-fit: cover;
+        .cal_img{
+            width: auto;
+            padding: 5px;
+            &:hover{
+                width: auto;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 440px){
+    .nos-grid, .box{
+        margin: -25px;
+        padding: 0;
+    }
+}
+
 
 /** |NOSOTROS| **/
 
