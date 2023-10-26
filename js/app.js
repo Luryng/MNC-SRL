@@ -1,5 +1,5 @@
 //MINERALES NUEVO CUYO S.R.L//
-let Password = 'MinNuevoCuyo';
+let Password = 'i';
 let UnidadRoN = 10500;
 let UnidadAzul = 10200;
 
@@ -31,25 +31,25 @@ function Calculo2 (Cant){
     return Total;
 }
 
-if (Ingreso()){
-    let opcion = prompt('Elija una opción: \n1 - Comprar Bolsa Negra/Roja (20Kg) \n2 - Comprar Bolsa Azul (24Kg) \nPresione X para finalizar.');
-    while (opcion !== 'X' && opcion !== 'x'){
-        switch (opcion){
+if (Ingreso()) {
+    let opcion = prompt('Elija una opción:\n1 - Comprar Bolsa Negra/Roja (20Kg)\n2 - Comprar Bolsa Azul (24Kg)\nPresione X para finalizar.');
+    while (opcion !== 'X' && opcion !== 'x') {
+        switch (opcion) {
             case '1':
-                alert('Precio Unidad de Pallets: ' + UnidadRoN);
-                let Cantidad = parseInt(prompt('Ingrese la cantidad de tarimas a comprar'));
-                let color = prompt('Eliga un color: Rojo - Negro');
-                if (Cantidad > 0 && (color === 'Rojo' || color === 'Negro')){
+                alert('Precio Unidad de Tarimas: ' + UnidadRoN);
+                let Cantidad = parseInt(prompt('Ingrese la cantidad de Tarimas a comprar'));
+                let color = prompt('Eliga un color: Rojo - Negro').toLowerCase();
+                if (Cantidad > 0 && (color === 'rojo' || color === 'negro')) {
                     const resultado = Calculo(Cantidad);
-                    alert('Detalles de su producto: Cal en bolsón ' + color + '\nPrecio Total: ' + resultado);
+                    alert('Detalles de su producto: Cal en bolsón: '+color+'. Cantidad de Tarimas: '+ Cantidad+'\nPrecio Total: ' + resultado);
                 } else {
                     alert('Error. Revise el color o cantidad elegida.');
                 }
                 break;
             case '2':
-                alert('Precio Unidad de Pallets: ' + UnidadAzul);
-                let cant = parseInt(prompt('Ingrese la cantidad de tarimas a comprar'));
-                if (cant > 10){
+                alert('Precio Unidad de Tarimas: ' + UnidadAzul);
+                let cant = parseInt(prompt('Ingrese la cantidad de tarimas a comprar \n Recuerde que el valor mínimo es de 5 Tarimas'));
+                if (cant > 4) {
                     const resultado2 = Calculo2(cant);
                     alert('Detalles de su producto: Cal en bolsa Azul \nPrecio Total: ' + resultado2);
                 }
@@ -58,7 +58,7 @@ if (Ingreso()){
                 alert('Opción Inválida. Intente nuevamente');
                 break;
         }
-        opcion = prompt('Elija una opción: \n1 - Comprar Bolsa Negra/Roja (20Kg) \n2 - Comprar Bolsa Azul (24Kg) \nPresione X para finalizar.');
+        opcion = prompt('Elija una opción:\n1 - Comprar Bolsa Negra/Roja (20Kg)\n2 - Comprar Bolsa Azul (24Kg)\nPresione X para finalizar.');
     }
 } else {
     alert('Contraseña incorrecta. No puede acceder al sitio');
